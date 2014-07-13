@@ -62,7 +62,7 @@ public class WeatherNotification implements WeatherListener {
 			ContentResolver resolver = mContext.getContentResolver();
 			mViewEnabled = Settings.System.getBoolean(resolver,
 					"cfx_weather_notification", false);
-			mStatusbarIconHide = Settings.AOKP.getBoolean(resolver,
+			mStatusbarIconHide = Settings.System.getBoolean(resolver,
 					"cfx_weather_icon", false);
 			updateNotification();
 		}
